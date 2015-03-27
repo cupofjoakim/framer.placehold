@@ -1,58 +1,99 @@
-styleArr = ["simple", "pretty", "cage", "crazy-cage", "murray", "starwars", "startrek", "space", "fatcats", "familyphotos"]
+styleArr = [
+    {
+        str: "simple",
+        url: "http://placehold.it/",
+        separator: "/",
+    },
+    {
+        str: "pretty",
+        url: "https://unsplash.it/",
+        separator: "/",
+    },
+    {
+        str: "cage",
+        url: "http://placecage.com/",
+        separator: "/",
+    },
+    {
+        str: "crazy-cage",
+        url: "http://placecage.com/c/",
+        separator: "/",
+    },
+    {
+        str: "murray",
+        url: "http://fillmurray.com/",
+        separator: "/",
+    },
+    {
+        str: "starwars",
+        url: "http://420placehold.it/starwars/",
+        separator: "-",
+    },
+    {
+        str: "startrek",
+        url: "http://420placehold.it/startrek/",
+        separator: "-",
+    },
+    {
+        str: "space",
+        url: "http://420placehold.it/space/",
+        separator: "-",
+    },
+    {
+        str: "fatcats",
+        url: "http://420placehold.it/fatcats/",
+        separator: "-",
+    },
+    {
+        str: "familyphotos",
+        url: "http://420placehold.it/familyphotos/",
+        separator: "-",
+    }
+]
 
-randomStyle = ->
-    return style = styleArr[Math.floor(Math.random() * styleArr.length)]
+
+isInArr = ( styleStr ) -> 
+
+    for i in [0..styleArr.length-1] by 1
+
+        if styleArr[i].str == styleStr
+            return styleArr[i]
+
+    return false
+
+
+randomStyle = ( layer ) ->
+
+    style = styleArr[Math.floor(Math.random() * styleArr.length)].str
+    applyStyle( layer, style )
 
 
 createUrl = (style, width, height) ->
 
-    # If no style has been provided we go with a pretty image from unsplash.it
-    switch style
-        when "simple"
-            url = "http://placehold.it/" + width + '/' + height 
-        when "pretty"
-            url = "https://unsplash.it/" + width + '/' + height 
-        when "cage"
-            url = "http://www.placecage.com/" + width + '/' + height  
-        when "crazy-cage"
-            url = "http://www.placecage.com/c/" + width + '/' + height  
-        when "murray"
-            url = "http://www.fillmurray.com/" + width + '/' + height  
-        when "starwars"
-            url = "http://420placehold.it/starwars/" + width + '-' + height 
-        when "startrek"
-            url = "http://420placehold.it/startrek/" + width + '-' + height 
-        when "space"
-            url = "http://420placehold.it/space/" + width + '-' + height  
-        when "fatcats"
-            url = "http://420placehold.it/fatcats/" + width + '-' + height 
-        when "familyphotos"
-            url = "http://420placehold.it/familyphotos/" + width + '-' + height 
-        else
-            url = "https://unsplash.it/" + width + '/' + height 
+    inArr = isInArr(style)
+
+    if (inArr)
+        url = inArr.url + width + inArr.separator + height
+    else 
+        url = "https://unsplash.it/" + width + '/' + height
 
     return url
+
 
 applyStyle = ( layer, style ) ->
     niceUrl = createUrl(style, layer.width, layer.height)
     layer.image = niceUrl
 
 
-# API METHODS
+exports.placeHold = ( layer, style ) ->
 
-## placehold sets an image to the layer that has been passed through
-exports.placehold = ( layer, style ) ->
     if layer
-        if style == "random"
-            style = randomStyle()
+        if style != "random"
+            applyStyle( layer, style )
+        else
+            randomStyle( layer, style )
 
-        applyStyle( layer, style )
-    else
-        console.log("Please provide a layer.")
 
-## getUrl returns a placeholder url that the user has more freedom with
 exports.getUrl = ( style, width, height ) -> 
-    if style == "random"
-        style = randomStyle()
-
     return createUrl( style, width, height )
+
