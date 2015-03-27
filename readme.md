@@ -1,6 +1,8 @@
 # framer.placehold
 This is a module for framer that provides a library of different image placeholder services.
 
+![The majestic nicolas cage in an example vision of this framer module](https://cloud.githubusercontent.com/assets/2109753/6866277/e0bcc5b6-d476-11e4-8766-22404b90bc52.jpg)
+
 ## Installation
 Put placehold.coffee in your modules folder.
 
