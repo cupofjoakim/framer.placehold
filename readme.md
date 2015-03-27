@@ -29,38 +29,39 @@ module.getUrl( "cage", 150, 150 )
 
 ## Available styles
 ### simple
-"simple" is the simplest style - with a simple box with the dimensions in it. Provided by placehold.it.
+"simple" is the simplest style - with a simple box with the dimensions in it. Provided by [placehold.it][placeholdit].
 
 ### pretty
-"pretty" takes images from every designers favorite placeholder source - unsplash.it. It's all very nice. This is also the default for module.placehold() if no style string is provided.
+"pretty" takes images from every designers favorite placeholder source - [unsplash.it][unsplash]. It's all very nice. This is also the default for module.placehold() if no style string is provided.
 
 ### cage
-"cage" sets all your images to be of one of our greatest actors, nicolas cage. Provided by placecage.com.
+"cage" sets all your images to be of one of our greatest actors, nicolas cage. Provided by [placecage.com][cage].
 
 ### crazy-cage
-A crazier version of "cage". 
+A crazier version of "cage". Provided by [placecage.com][cage].
 
 ### murray
-Bill.  I love you, and you should be in everything anyone makes. Placeholder server provided by fillmurray.com
+Bill.  I love you, and you should be in everything anyone makes. Placeholder server provided by [fillmurray.com][murray].
 
 ### starwars
-Star Wars imagery courtesy of 420placehold.it.
+Star Wars imagery courtesy of [420placehold.it][420].
 
 ### startrek
-Star Trek imagery curtesy of 420placehold.it. R.I.P Leonard Nimoy.
+Star Trek imagery curtesy of [420placehold.it][420]. R.I.P Leonard Nimoy.
 
 ### space
-Space imagery courtesy of 420placehold.it
+Space imagery courtesy of [420placehold.it][420].
 
 ### fatcats
-Images of fat cats. Courtesy of 420placehold.it
+Images of fat cats. Courtesy of [420placehold.it][420].
 
 ### familyphotos
-Awkward family photos, now in your framer prototypes. Courtesy of 420placehold.it
+Awkward family photos, now in your framer prototypes. Courtesy of [420placehold.it][420].
 
 ## Generous License, because this is like 15 lines of code.
 The MIT License (MIT)
 Copyright (c) 2015 Joakim Wimmerstedt
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -78,3 +79,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+[420]: http://420placehold.it/
+[cage]: http://placecage.com/
+[murray]: http://fillmurray.com
+[unsplash]: http://unsplash.it
+[placeholdit]: http://placehold.it 
