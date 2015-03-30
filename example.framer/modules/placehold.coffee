@@ -5,7 +5,7 @@ styleArr = [
         separator: "/",
     },
     {
-        str: "pretty",
+        str: "unsplash",
         url: "https://unsplash.it/",
         separator: "/",
     },
