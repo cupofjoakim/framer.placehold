@@ -2,7 +2,7 @@ styleArr = [
     {
         str: "simple",
         url: "http://placehold.it/",
-        separator: "/",
+        separator: "x",
     },
     {
         str: "pretty",
