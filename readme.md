@@ -31,8 +31,8 @@ module.getUrl( "cage", 150, 150 )
 ### simple
 "simple" is the simplest style - with a simple box with the dimensions in it. Provided by [placehold.it][placeholdit].
 
-### pretty
-"pretty" takes images from every designers favorite placeholder source - [unsplash.it][unsplash]. It's all very nice. This is also the default for module.placehold() if no style string is provided.
+### unsplash
+"unsplash" takes images from every designers favorite placeholder source - [unsplash.it][unsplash]. It's all very nice. This is also the default for module.placehold() if no style string is provided.
 
 ### cage
 "cage" sets all your images to be of one of our greatest actors, nicolas cage. Provided by [placecage.com][cage].
